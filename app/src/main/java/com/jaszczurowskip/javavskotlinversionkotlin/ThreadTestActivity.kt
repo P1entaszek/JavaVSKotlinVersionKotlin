@@ -105,5 +105,7 @@ class ThreadTestActivity : AppCompatActivity() {
         img.setImageBitmap(mutableBitmap)
     }
 
-    private fun invertRGB(rgb: Int): Int { return rgb.inv() and 0x00FFFFFF or -0x1000000 }
+    private fun invertRGB(rgb: Int): Int {
+        return rgb.inv() and 0x00FFFFFF or -0x1000000
+    }
 }
