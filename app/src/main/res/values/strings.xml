@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">JavaVSKotlinVersionKotlin</string>
+    <string name="converting">Converting </string>
+    <string name="single_thread">Single thread</string>
+    <string name="multi_thread">Multi thread</string>
+    <string name="choose_thread_mode">Choose thread mode</string>
+    <string name="ms">ms</string>
+    <string-array name="transformations_mode">
+        <item>Transformations</item>
+        <item>Inverse</item>
+        <item>Negative</item>
+    </string-array>
+    <string-array name="thread_mode">
+        <item>Choose thread mode</item>
+        <item>Single thread</item>
+        <item>Multi thread</item>
+    </string-array>
+</resources>
+
