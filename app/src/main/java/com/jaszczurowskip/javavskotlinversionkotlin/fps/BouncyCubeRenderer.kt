@@ -66,7 +66,7 @@ internal class BouncyCubeRenderer : GLSurfaceView.Renderer {
         val currentTime = System.currentTimeMillis()
         val frameTime = currentTime - lastFrameTime
         lastFrameTime = currentTime
-        mAngle += 200.8f * (frameTime / 1000f)
+        mAngle += (20.8f * (frameTime / 1000f)) + rotateSpeed
         fps = 1000.0f / frameTime.toFloat()
         Log.e("fps", "" + fps)
     }
