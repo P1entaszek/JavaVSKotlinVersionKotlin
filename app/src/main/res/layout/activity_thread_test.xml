@@ -28,8 +28,8 @@
                     android:id="@+id/imgFirstRow"
                     android:layout_width="match_parent"
                     android:layout_height="190dp"
-                    android:layout_marginEnd="8dp"
                     android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
                     android:layout_weight="1"
                     android:orientation="horizontal"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -48,7 +48,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:contentDescription="TODO"
                         app:srcCompat="@drawable/second" />
 
             </LinearLayout>
@@ -65,7 +64,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="First photo" />
+                        android:text="@string/first_photo" />
 
                 <TextView
                         android:id="@+id/tvSecondPhoto"
@@ -73,7 +72,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="Second photo" />
+                        android:text="@string/second_photo" />
 
             </LinearLayout>
 
@@ -83,8 +82,8 @@
                 android:id="@+id/imgSecondRow"
                 android:layout_width="match_parent"
                 android:layout_height="190dp"
-                android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -120,7 +119,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Third photo" />
+                    android:text="@string/third_photo" />
 
             <TextView
                     android:id="@+id/tvFourthPhoto"
@@ -128,7 +127,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Fourth photo" />
+                    android:text="@string/fourth_photo" />
         </LinearLayout>
     </LinearLayout>
 
@@ -136,9 +135,9 @@
             android:id="@+id/bttnStart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
-            android:text="Start"
+            android:layout_marginBottom="8dp"
+            android:text="@string/start"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
@@ -159,8 +158,8 @@
             android:id="@+id/spinnerThreadMode"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
             android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/spinnerTransformationMode"
@@ -170,10 +169,10 @@
             android:id="@+id/tvAllThreadTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="32dp"
-            android:text="All/Average  time consumed"
+            android:layout_marginEnd="8dp"
+            android:text="@string/all_average_time_consumed"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

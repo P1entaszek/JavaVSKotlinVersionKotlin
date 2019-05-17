@@ -1,4 +1,4 @@
-package com.jaszczurowskip.javavskotlinversionkotlin.memory
+package com.jaszczurowskip.javavskotlinversionkotlin.fps
 
 import android.opengl.GLES10.GL_TRIANGLE_FAN
 import android.opengl.GLES10.GL_UNSIGNED_BYTE

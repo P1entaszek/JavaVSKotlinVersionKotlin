@@ -3,7 +3,7 @@ package com.jaszczurowskip.javavskotlinversionkotlin
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import com.jaszczurowskip.javavskotlinversionkotlin.memory.GraphicTestActivity
+import com.jaszczurowskip.javavskotlinversionkotlin.fps.GraphicTestActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun registerListeners() {
-        bttnFpsTest.setOnClickListener {
+        fpsTest.setOnClickListener {
             val startFpsTest = Intent(this, GraphicTestActivity::class.java)
             startActivity(startFpsTest)
         }

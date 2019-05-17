@@ -1,4 +1,4 @@
-package com.jaszczurowskip.javavskotlinversionkotlin.memory
+package com.jaszczurowskip.javavskotlinversionkotlin.fps
 
 import android.opengl.GLSurfaceView
 import android.util.Log

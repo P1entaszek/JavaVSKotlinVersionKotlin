@@ -1,4 +1,4 @@
-package com.jaszczurowskip.javavskotlinversionkotlin.memory
+package com.jaszczurowskip.javavskotlinversionkotlin.fps
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -11,6 +11,6 @@ class GraphicTestActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_graphic_test)
         glView.setupView()
-        tvFpsPerformance.text = "FPS/sec: 66.3"
+        tvFpsPerformance.text = "FPS performance: 200"
     }
 }

@@ -4,21 +4,73 @@
                                              xmlns:tools="http://schemas.android.com/tools"
                                              android:layout_width="match_parent"
                                              android:layout_height="match_parent"
-                                             tools:context=".memory.GraphicTestActivity">
+                                             tools:context=".fps.GraphicTestActivity">
 
-    <TextView
-            android:id="@+id/tvFpsPerformance"
-            android:layout_width="wrap_content"
+    <LinearLayout
+            android:id="@+id/tvLayout"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:text="FPS performance"
+            android:gravity="center"
+            android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent">
 
-    <com.jaszczurowskip.javavskotlinversionkotlin.memory.GlSurfaceView
+        <TextView
+                android:id="@+id/tvAmountOfCubes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/amount_of_cubes" />
+
+        <TextView
+                android:id="@+id/tvRotateSpeed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/rotate_speed" />
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/npLayout"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLayout">
+
+        <com.michaelmuenzer.android.scrollablennumberpicker.ScrollableNumberPicker
+                android:id="@+id/npCubesAmount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:snp_maxValue="10000"
+                app:snp_minValue="250"
+                app:snp_stepSize="250"
+                app:snp_value="250"
+                app:snp_value_text_color="@color/colorPrimary"
+                app:snp_value_text_size="20sp" />
+
+        <com.michaelmuenzer.android.scrollablennumberpicker.ScrollableNumberPicker
+                android:id="@+id/npRotateSpeed"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:snp_maxValue="100"
+                app:snp_minValue="5"
+                app:snp_stepSize="5"
+                app:snp_value="5"
+                app:snp_value_text_color="@color/colorPrimary"
+                app:snp_value_text_size="20sp" />
+
+    </LinearLayout>
+
+    <com.jaszczurowskip.javavskotlinversionkotlin.fps.GlSurfaceView
             android:id="@+id/glView"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -28,6 +80,29 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvFpsPerformance"
-            app:layout_constraintVertical_bias="0.0"/>
+            app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+            android:id="@+id/tvFpsPerformance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/fps_performance"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.352"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/npLayout" />
+
+    <TextView
+            android:id="@+id/tvFps"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvFpsPerformance"
+            app:layout_constraintStart_toEndOf="@+id/tvFpsPerformance"
+            app:layout_constraintTop_toTopOf="@+id/tvFpsPerformance"
+            tools:text="200" />
 
 </android.support.constraint.ConstraintLayout>

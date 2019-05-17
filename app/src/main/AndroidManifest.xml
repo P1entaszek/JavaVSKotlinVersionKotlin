@@ -9,7 +9,7 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".memory.GraphicTestActivity">
+        <activity android:name=".fps.GraphicTestActivity">
         </activity>
         <activity android:name=".ThreadTestActivity">
         </activity>
