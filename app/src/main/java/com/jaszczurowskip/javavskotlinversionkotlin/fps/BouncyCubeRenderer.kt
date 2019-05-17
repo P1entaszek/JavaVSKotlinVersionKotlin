@@ -10,8 +10,9 @@ import javax.microedition.khronos.opengles.GL11
  * Created by jaszczurowskip on 18.04.2019
  */
 internal class BouncyCubeRenderer : GLSurfaceView.Renderer {
-    private val rowSize = 10f
+    private var rowSize = 10f
     private val mCube: Cube
+    private var rotateSpeed: Int = 0
     private var mAngle: Float = 0.toFloat()
     private var cubesCount: Int = 0
     private var lastFrameTime: Long = 0
@@ -19,8 +20,10 @@ internal class BouncyCubeRenderer : GLSurfaceView.Renderer {
     private var width: Int = 0
     private var height: Int = 0
 
-    fun setCubesCount(cubesCount: Int) {
+    fun setCubesCount(cubesCount: Int, rotateSpeed: Int) {
         this.cubesCount = cubesCount
+        this.rotateSpeed = rotateSpeed
+        rowSize = Math.ceil(Math.sqrt(cubesCount.toDouble())).toFloat()
 
     }
 

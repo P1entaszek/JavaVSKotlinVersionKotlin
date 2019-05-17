@@ -7,7 +7,7 @@ import android.util.AttributeSet
 /**
  * Created by jaszczurowskip on 18.04.2019
  */
-class GlSurfaceView : GLSurfaceView {
+class MyGlSurfaceView : GLSurfaceView {
 
     private lateinit var myRender: BouncyCubeRenderer
 
@@ -18,11 +18,16 @@ class GlSurfaceView : GLSurfaceView {
 
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {}
 
-    fun setupView() {
+    fun setupView(cubesCount: Int, rotateSpeed: Int) {
         super.setEGLConfigChooser(8, 8, 8, 8, 16, 0)
         this.myRender = BouncyCubeRenderer()
-        myRender.setCubesCount(100)
+        myRender.setCubesCount(cubesCount, rotateSpeed / 2)
         setRenderer(myRender)
         renderMode = RENDERMODE_CONTINUOUSLY
     }
+
+    fun changeAmountOfCubes(value: Int, rotateSpeed: Int) {
+        myRender.setCubesCount(value, rotateSpeed)
+    }
+
 }
