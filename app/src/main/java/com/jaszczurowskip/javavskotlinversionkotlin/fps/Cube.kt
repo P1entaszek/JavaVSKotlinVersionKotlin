@@ -14,7 +14,6 @@ import javax.microedition.khronos.opengles.GL11
 internal class Cube {
     private val mFVertexBuffer: FloatBuffer
     private val mColorBuffer: ByteBuffer
-    private val mIndexBuffer: ByteBuffer? = null
     private val mTfan1: ByteBuffer
     private val mTfan2: ByteBuffer
 

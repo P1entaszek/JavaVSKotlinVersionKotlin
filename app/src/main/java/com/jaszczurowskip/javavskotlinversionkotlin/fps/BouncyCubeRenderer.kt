@@ -43,7 +43,6 @@ internal class BouncyCubeRenderer : GLSurfaceView.Renderer {
         gl.glLoadIdentity()
         val scaleW = width / rowSize
         val scaleH = height / rowSize
-        //        gl.glTranslatef(-rowSizeW/2, -rowSizeH/2, -rowSizeW);
         gl.glTranslatef(scaleW / 2, scaleH / 2, -10f)
         var x = 0
         while (x < rowSize) {
@@ -52,7 +51,6 @@ internal class BouncyCubeRenderer : GLSurfaceView.Renderer {
 
                 gl.glPushMatrix()
                 gl.glTranslatef(x * scaleW, y.toFloat() * scaleH, 0.1f)
-                //            gl.glScalef(0.9f/rowSizeW, 0.9f/rowSizeH, 0.9f/rowSizeW);
                 gl.glRotatef(mAngle, 0.0f, 1.0f, 0.0f)
                 gl.glRotatef(mAngle, 1.0f, 0.0f, 0.0f)
                 gl.glScalef(scaleW * OBJ_SCALE, scaleW * OBJ_SCALE, scaleW * OBJ_SCALE)
@@ -75,19 +73,9 @@ internal class BouncyCubeRenderer : GLSurfaceView.Renderer {
         this.width = width
         this.height = height
         gl.glViewport(0, 0, width, height)
-        val aspectRatio: Float
-        val zNear = .1f
-        val zFar = 1000f
-        val fieldOfView = 60.0f / 57.3f
-        val size: Float
-
         gl.glEnable(GL10.GL_NORMALIZE)
-        aspectRatio = width.toFloat() / height.toFloat()
         gl.glMatrixMode(GL10.GL_PROJECTION)
-        size = zNear * Math.tan((fieldOfView / 2.0f).toDouble()).toFloat()
         gl.glOrthof(0.0f, width.toFloat(), height.toFloat(), 0.0f, -1.0f, 1000.0f)
-        //        gl.glFrustumf(-size, size, -size / aspectRatio,
-        //                size / aspectRatio, zNear, zFar);
         gl.glMatrixMode(GL10.GL_MODELVIEW)
     }
 
